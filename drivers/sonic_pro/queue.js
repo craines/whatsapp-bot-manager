@@ -1,4 +1,4 @@
-require('./api/api')
+require('./api')
 const { Worker } = require ('bullmq');
 const axios = require("axios");
 

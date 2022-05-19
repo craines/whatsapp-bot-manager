@@ -17,6 +17,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
 && DEBIAN_FRONTEND="noninteractive" npm install -g yarn pm2 \
 && unzip -o api.zip -d /home/venom_api/ \
 && DEBIAN_FRONTEND="noninteractive" yarn install -y \
+&& DEBIAN_FRONTEND="noninteractive" yarn add bullmq \
 && rm -rf /home/venom_api/files \
 && rm -rf /home/venom_api/tokens \
 && mkdir /home/venom_api/files \
