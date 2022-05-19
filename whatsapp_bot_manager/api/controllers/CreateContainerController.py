@@ -7,6 +7,8 @@ from typing import Optional
 
 
 class ContainerModel(BaseModel):
+    image: str
+    memory: str
     container_name: str
     token_system: str
     superchat_licence: Optional[str]
@@ -34,8 +36,10 @@ class CreateContainerController:
                 "BOT_NAME=%s" % data.container_name,
             ]
 
-            container = self.docker_client.containers.run('registry.gitlab.com/overall-software/whatsapp-pro/superchat:latest', detach=True, environment=environment,
-                                                          mem_limit='1024m', name=data.container_name, ports={3001: port},
+            container = self.docker_client.containers.run(data.image, detach=True, environment=environment,
+                                                          mem_limit="%sm" % data.memory,
+                                                          name=data.container_name,
+                                                          ports={3001: port},
                                                           restart_policy={"Name": "always"},
                                                           volumes=["%s/tokens:/home/venom_api/tokens" % path,
                                                                    "%s/files:/home/venom_api/files" % path])

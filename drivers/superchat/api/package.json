@@ -1,0 +1,52 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Full Venom Api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orkestral/api.git"
+  },
+  "author": "S2 <joe@s2.click>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orkestral/api/issues"
+  },
+  "homepage": "https://github.com/orkestral/api#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.6.0",
+    "@typescord/opus": "^0.5.0",
+    "async-get-file": "^1.0.4",
+    "axios": "^0.21.0",
+    "axios-file": "^1.0.17",
+    "bcrypt": "^5.0.0",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "download": "^8.0.0",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "genid": "^0.1.0",
+    "jsoncache": "^0.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-compress": "^5.0.1",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^4.0.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "mime-types": "^2.1.32",
+    "node-url-downloader": "^0.1.9",
+    "node-wget": "^0.4.3",
+    "node-wget-promise": "^0.1.6",
+    "nodejs-file-downloader": "^4.0.0",
+    "request": "^2.85.0",
+    "superagent": "^6.1.0",
+    "superagent-queue": "^0.0.3",
+    "superchats": "^2.0.1"
+  }
+}
