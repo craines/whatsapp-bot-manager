@@ -11,7 +11,6 @@ class ContainerModel(BaseModel):
     memory: str
     container_name: str
     token_system: str
-    superchat_licence: Optional[str]
     redis_host: str
     redis_port: int
 
@@ -29,8 +28,7 @@ class CreateContainerController:
             path = "%s/volumes/%s" % (pathlib.Path().resolve(), data.container_name)
 
             environment = [
-                "TOKEN_SYSTEM=%s" % data.token_system,
-                "SUPERCHAT_LICENSE=%s" % data.superchat_licence,
+                "LICENSE=%s" % data.token_system,
                 "REDIS_HOST=%s" % data.redis_host,
                 "REDIS_PORT=%s" % data.redis_port,
                 "BOT_NAME=%s" % data.container_name,

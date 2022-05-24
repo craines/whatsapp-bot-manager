@@ -8,8 +8,7 @@ function sleep(ms) {
 }
 
 const headers = {
-    "apikey": process.env.LICENSE,
-    "token": process.env.TOKEN_SYSTEM
+    "apikey": process.env.TOKEN_SYSTEM
 }
 
 async function send (job) {
