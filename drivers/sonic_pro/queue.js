@@ -8,7 +8,7 @@ function sleep(ms) {
 }
 
 const headers = {
-    "apikey": process.env.TOKEN_SYSTEM
+    "apikey": process.env.LICENSE
 }
 
 async function send (job) {
@@ -30,8 +30,7 @@ console.log(`
 BOT_NAME: ${process.env.BOT_NAME}
 REDIS_HOST: ${process.env.REDIS_HOST}
 REDIS_PORT: ${process.env.REDIS_PORT}
-TOKEN_SYSTEM: ${process.env.TOKEN_SYSTEM}
-SUPERCHAT_LICENSE: ${process.env.SUPERCHAT_LICENSE}
+LICENSE: ${process.env.LICENSE}
 `)
 
 

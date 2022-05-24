@@ -28,7 +28,9 @@ class CreateContainerController:
             path = "%s/volumes/%s" % (pathlib.Path().resolve(), data.container_name)
 
             environment = [
+                "TOKEN_SYSTEM=%s" % data.token_system,
                 "LICENSE=%s" % data.token_system,
+                "SUPERCHAT_LICENSE=%s" % data.token_system,
                 "REDIS_HOST=%s" % data.redis_host,
                 "REDIS_PORT=%s" % data.redis_port,
                 "BOT_NAME=%s" % data.container_name,
