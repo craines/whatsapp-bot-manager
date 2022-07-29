@@ -12,6 +12,6 @@ RUN apt-get update
 RUN apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-COPY ./whatsapp_bot_manager /code
+COPY ./whatsapp_bot_manager /code/whatsapp_bot_manager
 EXPOSE 80
 CMD ["uvicorn", "whatsapp_bot_manager.api.main:app", "--host", "0.0.0.0", "--port", "80"]
