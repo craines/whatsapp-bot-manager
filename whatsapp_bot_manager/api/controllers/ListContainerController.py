@@ -13,7 +13,7 @@ class ListContainerController:
                 containers = []
                 list = self.docker_client.containers.list(all=True)
                 for item in list:
-                    if 'bot' in item.name[0:2]:
+                    if 'bot' in item.name[0:3]:
                         containers.append(
                             {
                                 'id': item.id,
