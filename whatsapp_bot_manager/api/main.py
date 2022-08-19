@@ -6,6 +6,7 @@ from docker.errors import NotFound
 from whatsapp_bot_manager.api.controllers.CreateContainerController import CreateContainerController, ContainerModel
 from whatsapp_bot_manager.api.controllers.ListContainerController import ListContainerController
 from whatsapp_bot_manager.api.controllers.GetBotTokenController import GetBotTokenController
+from whatsapp_bot_manager.api.controllers.RestartContainerController import RestartContainerController
 from whatsapp_bot_manager.api.controllers.StartContainerController import StartContainerController
 from whatsapp_bot_manager.api.controllers.StopContainerController import StopContainerController
 from whatsapp_bot_manager.api.controllers.RemoveWithSessionContainerController import RemoveWithSessionContainerController
@@ -81,6 +82,14 @@ def start_container(name: str, response: Response):
 def stop_container(name: str, response: Response):
     try:
         return StopContainerController().get(name)
+    except NotFound as e:
+        response.status_code = 404
+
+
+@app.put("/restart/{name}")
+def stop_container(name: str, response: Response):
+    try:
+        return RestartContainerController().get(name)
     except NotFound as e:
         response.status_code = 404
 
