@@ -40,13 +40,9 @@
     "koa-router": "^10.0.0",
     "koa-static": "^5.0.0",
     "mime-types": "^2.1.32",
-    "node-url-downloader": "^0.1.9",
-    "node-wget": "^0.4.3",
-    "node-wget-promise": "^0.1.6",
-    "nodejs-file-downloader": "^4.0.0",
     "request": "^2.85.0",
-    "superagent": "^6.1.0",
-    "superagent-queue": "^0.0.3",
-    "superchats": "^2.0.1"
+    "sonic-pro": "^0.0.2",
+    "superagent": "^8.0.1",
+    "superagent-queue": "^0.0.3"
   }
 }
